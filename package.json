@@ -11,16 +11,16 @@
     "coverage": "jest --collectCoverageFrom=src/**.js --coverage src"
   },
   "keywords": [],
-  "author": "José Antonio Reyes",
+  "author": "José Antonio Reyes <imjaroiswebdev@gmail.com (https://imjaroiswebdev.tech)",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^5.13.0",
+    "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.2.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^22.21.0",
     "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "jest": "^24.1.0"
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0"
   }
 }

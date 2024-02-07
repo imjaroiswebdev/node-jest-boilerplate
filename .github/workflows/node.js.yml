@@ -28,3 +28,19 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm test
+
+  notification:
+    runs-on: ubuntu-latest
+    name: Notify PagerDuty
+    needs: [build]
+    if: always()
+    steps:
+      # make build job status available
+      # see https://github.com/marketplace/actions/workflow-status-action
+      - uses: martialonline/workflow-status@v3
+        id: check
+      - name: Create a change event
+        uses: PagerDuty/pagerduty-change-events-action@master
+        with:
+          integration-key: ${{ secrets.PAGERDUTY_CHANGE_INTEGRATION_KEY }}
+          custom-event: Tests Status ${{ steps.check.outputs.status }}
